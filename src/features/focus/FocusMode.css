@@ -1,0 +1,95 @@
+.focus-page {
+    position: relative;
+    min-height: calc(100vh - 80px);
+    /* Adjust based on header/layout */
+}
+
+/* Toggle Switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 28px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: hsl(var(--bg-secondary));
+    transition: .4s;
+    border: 1px solid hsl(var(--border));
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 3px;
+    background-color: hsl(var(--text-muted));
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background-color: hsl(var(--primary));
+    border-color: hsl(var(--primary));
+}
+
+input:checked+.slider:before {
+    transform: translateX(20px);
+    background-color: white;
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+/* Deep Focus Overlay */
+.deep-focus-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: hsl(var(--bg-primary));
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.overlay-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.emergency-exit-btn {
+    margin-top: 3rem;
+    background: transparent;
+    border: 1px solid hsl(var(--text-muted) / 0.3);
+    color: hsl(var(--text-muted));
+    padding: 0.5rem 1.5rem;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.emergency-exit-btn:hover {
+    border-color: red;
+    color: red;
+}

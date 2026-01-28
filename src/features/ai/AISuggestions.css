@@ -1,0 +1,90 @@
+.ai-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.ai-card {
+    border: 1px solid hsl(var(--border));
+    transition: all 0.3s;
+}
+
+.ai-card.loading {
+    display: flex;
+    flex-direction: column;
+    items-center: center;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    min-height: 150px;
+}
+
+.ai-card.highlight {
+    background: linear-gradient(135deg, hsl(var(--bg-card)), hsl(var(--bg-secondary)));
+    border-color: hsl(var(--accent) / 0.3);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.icon-badge {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background-color: hsl(var(--accent) / 0.1);
+    color: hsl(var(--accent));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-badge.blue {
+    background-color: rgba(59, 130, 246, 0.1);
+    color: rgb(59, 130, 246);
+}
+
+.schedule-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.schedule-item {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem;
+    background-color: hsl(var(--bg-secondary) / 0.5);
+    border-radius: 8px;
+    border: 1px solid transparent;
+    transition: all 0.2s;
+}
+
+.schedule-item:hover {
+    border-color: hsl(var(--border));
+    background-color: hsl(var(--bg-secondary));
+}
+
+.time-col {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    min-width: 60px;
+    padding-right: 0.5rem;
+    border-right: 1px solid hsl(var(--border));
+    margin-right: 0.75rem;
+}
+
+.info-col {
+    flex: 1;
+}
+
+.add-btn {
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    border-radius: 6px;
+}

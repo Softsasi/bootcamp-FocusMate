@@ -1,0 +1,128 @@
+.dashboard-container {
+    animation: fadeIn 0.4s ease-out;
+}
+
+.dash-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.metric-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    transition: transform 0.2s;
+}
+
+.metric-card:hover {
+    transform: translateY(-2px);
+    border-color: hsl(var(--border) / 1.5);
+}
+
+.metric-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(var(--bg-secondary));
+}
+
+.metric-icon.purple {
+    background-color: hsl(var(--primary) / 0.15);
+    color: hsl(var(--primary));
+}
+
+.metric-icon.cyan {
+    background-color: hsl(var(--accent) / 0.15);
+    color: hsl(var(--accent));
+}
+
+.metric-icon.pink {
+    background-color: rgba(236, 72, 153, 0.15);
+    color: rgb(236, 72, 153);
+}
+
+.metric-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.metric-label {
+    font-size: 0.875rem;
+    color: hsl(var(--text-muted));
+}
+
+.main-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+.section-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: hsl(var(--text-secondary));
+}
+
+.action-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.action-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem;
+    cursor: pointer;
+    border: 1px solid hsl(var(--border));
+    transition: all 0.2s;
+}
+
+.action-card:hover {
+    background-color: hsl(var(--bg-secondary));
+    border-color: hsl(var(--primary) / 0.5);
+}
+
+.hover-glow:hover {
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.15);
+}
+
+.action-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-title {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.card-desc {
+    font-size: 0.85rem;
+    color: hsl(var(--text-muted));
+}
+
+.insight-card {
+    height: 100%;
+    background: linear-gradient(180deg, hsl(var(--bg-card)), hsl(var(--bg-secondary)));
+}
